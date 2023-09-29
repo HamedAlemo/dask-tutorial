@@ -1,0 +1,20 @@
+name: base
+channels:
+  - conda-forge
+dependencies:
+  # - python=3.10
+  - jupyterlab=3.6.3
+  - numpy=1.23.1
+  - pystac-client=0.7.5
+  - planetary-computer=1.0.0
+  - leafmap=0.26.0
+  - matplotlib
+  - xarray
+  - mamba
+  - geogif
+  - dask=2023.1.0
+  - dask-labextension
+  - distributed=2023.1.0
+  - stackstac=0.5.0
+  - ipycytoscape
+  - bottleneck
