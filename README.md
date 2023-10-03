@@ -12,8 +12,10 @@ You need to have Docker installed on your machine.
 It's recommended to pull the Docker image from Dockerhub. Otherwise, if you prefer, you can build your own image using the instructions in the following section. 
 
 ```
-$ docker pull hamedalemo/dask-tutorial
+$ docker pull hamedalemo/dask-tutorial:1.0
+```
 
+```
 $ docker run -it -p 8888:8888 -p 8787:8787 hamedalemo/dask-tutorial
 ```
 
