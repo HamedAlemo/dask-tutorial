@@ -10,6 +10,8 @@ RUN useradd -m jupyteruser
 USER jupyteruser
 
 WORKDIR /home/jupyteruser
+COPY dask_intro.ipynb .
+COPY stackstac.ipynb .
 
 # Expose the JupyterLab port
 EXPOSE 8888
