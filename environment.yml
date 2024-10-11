@@ -1,20 +1,17 @@
-name: base
+name: dask_tutorial
 channels:
   - conda-forge
 dependencies:
-  - jupyterlab=3.6.3
-  - numpy=1.23.1
+  - jupyterlab=4.2.5
   - pystac-client=0.7.5
   - planetary-computer=1.0.0
-  - leafmap=0.26.0
+  - leafmap=0.38.5
   - matplotlib
-  - xarray
-  - mamba
   - geogif
-  - dask=2023.1.0
+  - dask=2024.9.1
   - dask-labextension
-  - distributed=2023.1.0
-  - stackstac=0.5.0
+  - distributed=2024.9.1
   - ipycytoscape
   - bottleneck
+  - stackstac=0.5.0
   - boto3

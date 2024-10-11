@@ -1,15 +1,17 @@
-FROM continuumio/miniconda3:22.11.1
-
-RUN apt-get update && apt-get install -y graphviz git
+FROM continuumio/miniconda3:24.7.1-0
 
 COPY environment.yml .
-RUN conda env update -n base -f environment.yml --prune
+RUN conda env create -f environment.yml
+
+# Activate the Conda environment
+RUN echo "conda activate dask_tutorial" >> ~/.bashrc
+ENV PATH="$PATH:/opt/conda/envs/dask_tutorial/bin"
 
 # Create a non-root user and switch to that user
-RUN useradd -m jupyteruser
-USER jupyteruser
+RUN useradd -m daskuser
+USER daskuser
 
-WORKDIR /home/jupyteruser
+WORKDIR /home/daskuser
 COPY dask_intro.ipynb .
 COPY stackstac.ipynb .
 COPY dask_dataframe.ipynb .
