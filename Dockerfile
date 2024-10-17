@@ -12,9 +12,9 @@ RUN useradd -m daskuser
 USER daskuser
 
 WORKDIR /home/daskuser
-COPY dask_intro.ipynb .
-COPY stackstac.ipynb .
-COPY dask_dataframe.ipynb .
+COPY --chown=daskuser dask_intro.ipynb .
+COPY --chown=daskuser stackstac.ipynb .
+COPY --chown=daskuser dask_dataframe.ipynb .
 
 # Expose the JupyterLab port
 EXPOSE 8888
