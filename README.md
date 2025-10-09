@@ -9,6 +9,7 @@ You need to have Docker installed on your machine.
 
 ## Instructions
 
+### Method 1 - Pull Docker image from DockerHub (Recommended):
 It's recommended to pull the Docker image from Dockerhub. Otherwise, if you prefer, you can build your own image using the instructions in the following section. 
 
 ```
@@ -25,17 +26,17 @@ Port `8787` is used by Dask Dashboard.
 - Open `dask_intro.ipynb`, `stackstac.ipynb` or `dask_dataframe.ipynb` and follow the instructions. 
 
 
-Build the Docker image:
+### Method 2 - Build your Docker image:
 
 **Windows users:** It is highly recommended that you pull the Docker image, there seems to be an issue with conda-forge on WSL. 
 
 ```
-docker build -t dask-tutorial .
+docker build -t dask-tutorial:1.3 .
 ```
 
 Run the container as following after switching to the repository's directory locally:
 ```
-docker run -it -p 8888:8888 -p 8787:8787 dask-tutorial
+docker run -it -p 8888:8888 -p 8787:8787 dask-tutorial:1.3
 ```
 - Copy the Jupyter Lab url and paste it in your browser. 
 - Open `dask_intro.ipynb`, `stackstac.ipynb` or `dask_dataframe.ipynb` and follow the instructions. 
