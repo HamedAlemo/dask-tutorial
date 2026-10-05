@@ -4,39 +4,24 @@ This repository contains an introduction to Dask and tutorials to use Dask array
 
 ## Requirements
 
-You need to have Docker installed on your machine. 
+You need to have [pixi](https://pixi.sh) installed on your machine. Follow the [installation instructions](https://pixi.sh/latest/installation/) for your operating system.
 
 
 ## Instructions
 
-### Method 1 - Pull Docker image from DockerHub (Recommended):
-It's recommended to pull the Docker image from Dockerhub. Otherwise, if you prefer, you can build your own image using the instructions in the following section. 
+Clone this repository and switch to its directory:
 
 ```
-docker pull hamedalemo/dask-tutorial:1.3
+git clone https://github.com/HamedAlemo/dask-tutorial.git
+cd dask-tutorial
 ```
 
+Start Jupyter Lab:
+
 ```
-docker run -it -p 8888:8888 -p 8787:8787 hamedalemo/dask-tutorial:1.3
+pixi run lab
 ```
 
-Port `8787` is used by Dask Dashboard.
-
-- Copy the Jupyter Lab url and paste it in your browser. 
+- Jupyter Lab will open in your browser (or copy the url printed in the terminal and paste it in your browser). 
 - Open `dask_intro.ipynb`, `stackstac.ipynb` or `dask_dataframe.ipynb` and follow the instructions. 
-
-
-### Method 2 - Build your Docker image:
-
-**Windows users:** It is highly recommended that you pull the Docker image, there seems to be an issue with conda-forge on WSL. 
-
-```
-docker build -t dask-tutorial:1.3 .
-```
-
-Run the container as following after switching to the repository's directory locally:
-```
-docker run -it -p 8888:8888 -p 8787:8787 dask-tutorial:1.3
-```
-- Copy the Jupyter Lab url and paste it in your browser. 
-- Open `dask_intro.ipynb`, `stackstac.ipynb` or `dask_dataframe.ipynb` and follow the instructions. 
+- The Dask Dashboard is available on port `8787` once you start a Dask cluster in a notebook.
