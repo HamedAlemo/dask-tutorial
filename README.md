@@ -23,5 +23,5 @@ pixi run lab
 ```
 
 - Jupyter Lab will open in your browser (or copy the url printed in the terminal and paste it in your browser). 
-- Open `dask_intro.ipynb`, `stackstac.ipynb` or `dask_dataframe.ipynb` and follow the instructions. 
+- Open `01_dask_array.ipynb`, `02_stac_query_w_stackstac.ipynb` or `03_dask_dataframe.ipynb` notebooks from the `notebooks` folder and follow the instructions. 
 - The Dask Dashboard is available on port `8787` once you start a Dask cluster in a notebook.
